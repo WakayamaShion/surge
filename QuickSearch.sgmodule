@@ -47,8 +47,6 @@
 # wx：微信
 # rd：Reddit
 # jd：京東
-# tb：淘寶 「需登錄淘寶賬號」
-# tm：天貓
 # ac：Acfun
 # bli：嗶哩嗶哩
 # ytb：YouTube
@@ -115,10 +113,6 @@
 ^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
 
 ^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
-
-^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
-
-^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
 
 ^https:\/\/duckduckgo.com\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword==$1 302
 
