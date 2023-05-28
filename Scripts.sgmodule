@@ -1,0 +1,146 @@
+#!name=𝐐𝐮𝐢𝐜𝐤 𝐒𝐞𝐚𝐫𝐜𝐡
+#!desc=澤村・スペンサー・英梨々
+#!system=ios
+
+[URL Rewrite]
+
+# Ｑｕａｎｔｕｍｕｌｔ Ｘ 語法示例：
+# ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302 https://www.google.com/search?q=$1
+# 
+# ^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ url 302 http://dict.youdao.com/search?q=$1
+# ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+yd.+ url 302 http://dict.youdao.com/search?q=$1
+
+# Ｓｕｒｇｅ 語法示例：
+# ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+
+# 注：1）先進入設置更改 Safari 默認搜索為 DuckDuckGO。2）Safari 內輸入 「命令 + 空格 + 關鍵詞」 即可快速指定搜索引擎搜索 且可自行修改指令或者添加搜索引擎。
+
+// 命令索引
+
+// 第一部分 自定義
+
+# ydr：yande.re 作者/關鍵詞搜索
+# hmn：Ｈ · 萌娘百科
+# mn：萌娘百科
+# bg：Bangumi.tv
+# bt：Comicat 搜索
+# ski：Subkebei 關鍵詞搜索
+# px：pixiv 畫師搜索
+# eh：e-hentai.org 檢索
+# exh：exhentai.org 檢索
+# yh：greasyfork 搜索
+
+// 第二部分
+
+# gh：GitHub
+# gm：Google 圖片搜索
+# wiki：維基百科
+# wk：維基中文
+# tw Twitter
+# yd：有道詞典
+# trc：Google 譯至中
+# tre：Google 譯至英
+# trj：Google 譯至日
+# db：豆瓣搜索
+# zh：知乎
+# wb：微博
+# wx：微信
+# rd：Reddit
+# amz：亞馬遜
+# jd：京東
+# tb：淘寶 「需登錄淘寶賬號」
+# tm：天貓
+# ac：Acfun
+# bli：嗶哩嗶哩
+# ytb：YouTube
+# ph：PornHub 
+# gd：Google Drive 資源
+# bi：必應
+# bd：百度搜索
+# ddg：DuckDuckGo 搜索
+# 無指令則轉 Google 搜索
+
+// 第一部分 自定義
+
+^https:\/\/duckduckgo.com\/\?q=ydr\+([^&]+).+ https://yande.re/post?tags=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=hmn\+([^&]+).+ https://hmoegirl.info/index.php?search=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=mn\+([^&]+).+ https://mzh.moegirl.org.cn/index.php?search=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=bg\+([^&]+).+ https://bangumi.tv/subject_search/$1 302
+
+^https:\/\/duckduckgo.com\/\?q=bt\+([^&]+).+ http://www.comicat.org/search.php?keyword=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=ski\+([^&]+).+ https://sukebei.nyaa.si/?q=$1&f=0&c=1_1 302
+
+^https:\/\/duckduckgo.com\/\?q=px\+([^&]+).+ https://www.pixiv.net/search_user.php?nick=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=eh\+([^&]+).+ https://e-hentai.org/?f_search=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=exh\+([^&]+).+ https://exhentai.org/?f_search=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=yh\+([^&]+).+ https://greasyfork.org/zh-CN/scripts?q=$1 302
+
+// 第二部分
+
+^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=wa\+([^&]+).+ https://www.wolframalpha.com/input/?i=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ http://wikipedia.org/wiki/$2 302
+
+^https:\/\/duckduckgo.com\/\?q=wk(\+|%20)([^&]+).+ https://zh.wikipedia.org/wiki/$2 302
+
+^https:\/\/duckduckgo.com\/\?q=tw(\+|%20)([^&]+).+ https://twitter.com/search?q=$2 302
+
+^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=trc\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=tre\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=wb\+([^&]+).+ https://s.weibo.com/weibo/$1 302
+
+^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=rd\+([^&]+).+ https://www.reddit.com/search?q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword==$1 302
+
+^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=gd\+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
+
+^https:\/\/duckduckgo.com\/\?q=bi\+([^&]+).+ https://cn.bing.com/search?q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+
+[MITM]
+hostname = %APPEND% duckduckgo.com
