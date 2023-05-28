@@ -3,7 +3,8 @@
 #!system=ios
 
 [Script]
-# Load more results automatically and endlessly
+
+# Load more results automatically and endlessly.
 Ｇｏｏｇｌｅ = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/endlessgoogle.js,script-update-interval=-1
 
 [URL Rewrite]
