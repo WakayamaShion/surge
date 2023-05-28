@@ -2,11 +2,6 @@
 #!desc=澤村・スペンサー・英梨々
 #!system=ios
 
-[Script]
-
-# 谷歌檢索時將自動載入更多的結果
-Ｇｏｏｇｌｅ = type=http-response,pattern=^https?:\/\/www\.google\..*\/search,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/endlessgoogle.js,script-update-interval=-1
-
 [URL Rewrite]
 
 # Ｑｕａｎｔｕｍｕｌｔ Ｘ 語法示例：
@@ -136,4 +131,4 @@
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
 [MITM]
-hostname = %APPEND% duckduckgo.com, www.google.*
+hostname = %APPEND% duckduckgo.com
