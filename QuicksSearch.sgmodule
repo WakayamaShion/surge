@@ -1,4 +1,4 @@
-#!name=𝐐𝐮𝐢𝐜𝐤 𝐒𝐞𝐚𝐫𝐜𝐡
+#!name=Quick Search
 #!desc=澤村・スペンサー・英梨々
 #!system=ios
 
@@ -46,7 +46,6 @@
 # wb：微博
 # wx：微信
 # rd：Reddit
-# amz：亞馬遜
 # jd：京東
 # tb：淘寶 「需登錄淘寶賬號」
 # tm：天貓
@@ -54,7 +53,6 @@
 # bli：嗶哩嗶哩
 # ytb：YouTube
 # ph：PornHub 
-# gd：Google Drive 資源
 # bi：必應
 # bd：百度搜索
 # ddg：DuckDuckGo 搜索
@@ -116,8 +114,6 @@
 
 ^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
 
-^https:\/\/duckduckgo.com\/\?q=amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
-
 ^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
 
 ^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
@@ -131,8 +127,6 @@
 ^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
 
 ^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
-
-^https:\/\/duckduckgo.com\/\?q=gd\+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
 
 ^https:\/\/duckduckgo.com\/\?q=bi\+([^&]+).+ https://cn.bing.com/search?q=$1 302
 
