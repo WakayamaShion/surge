@@ -11,10 +11,11 @@
 Ｐｈｏｔｏｓｈｏｐ = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/photoshop.js,script-update-interval=0,type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile
 # Ｕｎｌｏｃｋ Ｌｉｇｈｔｒｏｏｍ
 Ｌｉｇｈｔｒｏｏｍ = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/lightroom.js,script-update-interval=-1
-# 
+# Ｂｌｏｃｋ ｐｉｘｉｖ ＡＤｓ
+ＰＩＸＩＶ = type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/PixivADs.js
 # ％ＡＰＰＥＮＤ％模塊语法 當寫入配置時請刪除。
 # 說明：ＭＩＴＭ buy.itunes.apple.com 後 會導致切換 Ａｐｐｌｅ ＩＤ 時 提示無法登錄。
 # ＭＩＴＭ api.revenuecat.com 可能導致部分 Ａｐｐ 丟失內購。
 
 [MITM]
-hostname= %APPEND% lcs-mobile-cops.adobe.io, photos.adobe.io
+hostname= %APPEND% lcs-mobile-cops.adobe.io, photos.adobe.io, oauth.secure.pixiv.net
