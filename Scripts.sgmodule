@@ -12,7 +12,7 @@
 # Ｕｎｌｏｃｋ Ｌｉｇｈｔｒｏｏｍ
 Ｌｉｇｈｔｒｏｏｍ = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/lightroom.js,script-update-interval=-1
 # Ｂｌｏｃｋ ｐｉｘｉｖ ＡＤｓ
-ＰＩＸＩＶ = type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/PixivADs.js
+ＰＩＸＩＶ = type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/pixiv.js
 # Ｒｅｍｏｖｅ Ｂａｃｋｇｒｏｕｎｄ
 Ｃｏｌｌａｒｔ =type=http-response,pattern=^https:\/\/iap\.etm\.tech\/receipts,requires-body=1,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/Collart.js
 # ％ＡＰＰＥＮＤ％模塊语法 當寫入配置時請刪除。
