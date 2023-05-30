@@ -17,7 +17,7 @@
 Ｃｏｌｌａｒｔ =type=http-response,pattern=^https:\/\/iap\.etm\.tech\/receipts,requires-body=1,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/Collart.js
 # 阿里雲盤解鎖本地會員
 雲盤解鎖 = type=http-response,pattern=https:\/\/api\.aliyundrive\.com\/business\/v1\.0\/users\/vip/info, requires-body=1,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/mock.js, argument=("?vipList")->$1: [{"code": "svip.20t"，， "promotedAt": 1675574551，， "expire": 4077667351，， "name": "8TB超级会员"} ]，，"test"&("?level")\s?:\s?("(.+?)"|\d|null)->$1: "20t"&("?name")\s?:\s?("(.+?)"|\d|null)->$1: "20T超级会员"
-雲盤描述 = type=http-response,pattern=https:\/\/api\.aliyundrive\.com\/business\/v1\/users\/me\/vip\/info, requires-body=1,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/mock.js, argument=("?description")\s?:\s?("(.+?)"|\d|null)->$1: "有效期至 2099-03-20"&("?rightButtonText")\s?:\s?("(.+?)"|\d|null)->$1: "SVIP"&("?level")\s?:\s?("(.+?)"|\d|null)->$1: "20t"
+雲盤描述 = type=http-response,pattern=https:\/\/api\.aliyundrive\.com\/business\/v1\/users\/me\/vip\/info, requires-body=1,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/mock.js, argument=("?description")\s?:\s?("(.+?)"|\d|null)->$1: "有效期至 2222-22-22"&("?rightButtonText")\s?:\s?("(.+?)"|\d|null)->$1: "SVIP"&("?level")\s?:\s?("(.+?)"|\d|null)->$1: "20t"
 # ％ＡＰＰＥＮＤ％模塊语法 當寫入配置時請刪除。
 # 說明：
 # ＭＩＴＭ buy.itunes.apple.com 會導致切換 Ａｐｐｌｅ ＩＤ 時 提示無法登錄 等問題。
