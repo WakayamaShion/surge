@@ -1,12 +1,11 @@
 /*
-  Surge 脚本实现 Qx 的 response-body、和request-body 重写类型
+  Ｓｕｒｇｅ 脚本实现 ＱＸ 的 response-body、和request-body 重写类型
   
-  如 Qx：
+  如 ＱＸ：
 https://service.ilovepdf.com/v1/user url response-body false response-body true
    
-  可改写为 Surge：
-[Script] 
-test = type=http-response,pattern=https://service.ilovepdf.com/v1/user,requires-body=1,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/replace-body.js, argument=false->true
+  可改写为 Ｓｕｒｇｅ：
+Ｓｕｒｇｅ = type=http-response,pattern=https://service.ilovepdf.com/v1/user,requires-body=1,script-path=＃, argument=false->true
 
 argument=要匹配值=作为替换的值
 支持正则：如argument=\w+->test
@@ -15,7 +14,8 @@ argument=要匹配值=作为替换的值
 
 支持改写响应体和请求体体（type=http-response 或 http-request）注意必须打开需要body（requires-body=1）
 
-tips 
+#Tips
+ 
 修改json格式的键值对可以这样：
 argument=("key")\s?:\s?"(.+?)"->$1: "new_value"
 
