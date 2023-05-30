@@ -1,26 +1,23 @@
 /*
-  Ｓｕｒｇｅ 脚本实现 ＱＸ 的 response-body、和request-body 重写类型
+  Ｓｕｒｇｅ 腳本實現 ＱＸ 的 response-body、和 request-body 重寫類型
   
   如 ＱＸ：
 https://service.ilovepdf.com/v1/user url response-body false response-body true
    
-  可改写为 Ｓｕｒｇｅ：
+  可改寫為 Ｓｕｒｇｅ：
 Ｓｕｒｇｅ = type=http-response,pattern=https://service.ilovepdf.com/v1/user,requires-body=1,script-path=＃, argument=false->true
 
-argument=要匹配值=作为替换的值
-支持正则：如argument=\w+->test
-支持正则修饰符：如argument=/\w+/g->test
-支持多参数，如：argument=匹配值1->替换值1&匹配值2->替换值2
-
-支持改写响应体和请求体体（type=http-response 或 http-request）注意必须打开需要body（requires-body=1）
+argument=要匹配值=作為替換的值
+支持正則：如argument=\w+->test
+支持正則修飾符：如argument=/\w+/g->test
+支持多參數，如：argument=匹配值1->替換值1&匹配值2->替換值2
+支持改寫響應體和請求體體（type=http-response 或 http-request）注意必須打開需要 body（requires-body=1）
 
 #Tips
- 
-修改json格式的键值对可以这样：
+修改json格式的鍵值對時：
 argument=("key")\s?:\s?"(.+?)"->$1: "new_value"
+s修飾符可以讓.匹配換行符，如 argument=/.+/s->hello
 
-s修饰符可以让.匹配换行符，如 argument=/.+/s->hello
-  
 */
 
 function getRegexp(re_str) {
