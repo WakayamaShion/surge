@@ -13,8 +13,6 @@
 Ｌｉｇｈｔｒｏｏｍ = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/lightroom.js,script-update-interval=-1
 # Ｂｌｏｃｋ ｐｉｘｉｖ ＡＤｓ
 ＰＩＸＩＶ = type=http-response,pattern=^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/pixiv.js
-# Ｒｅｍｏｖｅ Ｂａｃｋｇｒｏｕｎｄ
-Ｃｏｌｌａｒｔ =type=http-response,pattern=^https:\/\/iap\.etm\.tech\/receipts,requires-body=1,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/Collart.js
 # 阿里雲盤解鎖本地會員
 雲盤解鎖 = type=http-response,pattern=https:\/\/api\.aliyundrive\.com\/business\/v1\.0\/users\/vip/info, requires-body=1,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/mock.js, argument=("?vipList")->$1: [{"code": "svip.20t"，， "promotedAt": 1675574551，， "expire": 4077667351，， "name": "8TB超级会员"} ]，，"test"&("?level")\s?:\s?("(.+?)"|\d|null)->$1: "20t"&("?name")\s?:\s?("(.+?)"|\d|null)->$1: "20T超级会员"
 雲盤描述 = type=http-response,pattern=https:\/\/api\.aliyundrive\.com\/business\/v1\/users\/me\/vip\/info, requires-body=1,script-path=https://raw.githubusercontent.com/WakayamaShion/surge/main/mock.js, argument=("?description")\s?:\s?("(.+?)"|\d|null)->$1: "宮下早紀 2222-22-22"&("?rightButtonText")\s?:\s?("(.+?)"|\d|null)->$1: "SVIP"&("?level")\s?:\s?("(.+?)"|\d|null)->$1: "20t"
@@ -24,4 +22,4 @@
 # ＭＩＴＭ api.revenuecat.com 可能導致部分 Ａｐｐ 丟失內購。
 
 [MITM]
-hostname= %APPEND% lcs-mobile-cops.adobe.io, photos.adobe.io, oauth.secure.pixiv.net, iap.etm.tech, api.aliyundrive.com
+hostname= %APPEND% lcs-mobile-cops.adobe.io, photos.adobe.io, oauth.secure.pixiv.net, api.aliyundrive.com
