@@ -1,0 +1,53 @@
+# 針對部分網站、 ＡＰＰ 顯示 ＩＰ 歸屬地。
+
+# 嗶哩嗶哩
+DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,biliapi.com 
+DOMAIN,api.bilibili.com
+DOMAIN,api.bilibili.tv 
+DOMAIN,app.bilibili.com
+DOMAIN,api.live.bilibili.com
+DOMAIN,api.vc.bilibili.com 
+DOMAIN,passport.bilibili.com 
+DOMAIN,live-trace.bilibili.com
+DOMAIN,message.bilibili.com 
+DOMAIN,cm.bilibili.com 
+DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,im9.com 
+DOMAIN-SUFFIX,acg.tv 
+DOMAIN-SUFFIX,biligame.com 
+
+# 微博
+DOMAIN,api.weibo.cn
+DOMAIN,api.weibo.com 
+DOMAIN-SUFFIX,weibocdn.com 
+DOMAIN-KEYWORD,weibo 
+
+# 百度貼吧 IP
+DOMAIN,tieba.baidu.com
+DOMAIN,tbmsg.baidu.com 
+DOMAIN,tb5.bdstatic.com 
+DOMAIN,fclog.baidu.com
+DOMAIN,gsp0.baidu.com
+DOMAIN,hm.baidu.com 
+DOMAIN,www.baidu.com
+
+# 知乎
+#DOMAIN,zhihu-web-analytics.zhihu.com
+#DOMAIN,www.zhihu.com
+#DOMAIN,api.zhihu.com
+DOMAIN-SUFFIX,zhihu.com
+IP-CIDR,103.41.167.0/24
+
+# 抖音
+# 需要家寬 ＩＰ 才可生效。
+# https://ipinfo.io/
+DOMAIN-KEYWORD,core-c-lq
+DOMAIN-KEYWORD,core-lq
+DOMAIN-KEYWORD,normal-c-lq
+DOMAIN-KEYWORD,normal-lq
+DOMAIN-KEYWORD,search-quic-lq
+DOMAIN-KEYWORD,search-lq
+
+# 小紅書
+DOMAIN-SUFFIX,xiaohongshu.com
